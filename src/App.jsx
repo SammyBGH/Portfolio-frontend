@@ -6,12 +6,16 @@ import About from './pages/About'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import SocialSidebar from "./components/SocialSidebar"
+import "./App.css"
 
 export default function App(){
   return (
     <div className="app-root">
       <Nav />
+      <SocialSidebar />
       <main>
+        
         <Hero />
         <About />
         <Skills />

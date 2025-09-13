@@ -1,0 +1,64 @@
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+/* Each link */
+.social-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.6rem;
+  border-radius: 999px;
+  transition: background 0.3s, transform 0.3s, width 0.3s;
+  overflow: hidden;
+  width: 2.6rem; /* shows only icon by default */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Icon stays visible */
+.social-link .icon {
+  flex-shrink: 0;
+}
+
+/* Label hidden initially */
+.social-link .label {
+  margin-left: 0.6rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* Hover reveal */
+.social-link:hover {
+  width: 8rem;
+  transform: translateX(4px);
+}
+
+.social-link:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Brand backgrounds — force override */
+.social-link.github {
+  background: #333 !important; /* GitHub dark */
+}
+
+.social-link.linkedin {
+  background: #0077b5 !important; /* LinkedIn blue */
+}
+
+.social-link.email {
+  background: #d44638 !important; /* Gmail red */
+}
