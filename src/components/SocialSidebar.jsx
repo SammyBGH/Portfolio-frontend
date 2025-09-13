@@ -24,7 +24,7 @@ export default function SocialSidebar() {
         <span className="label">LinkedIn</span>
       </a>
       <a
-        href="mailto:sammyboakye35@gmail.com"
+        href="mailto:sammyboakye295@gmail.com"
         className="social-link email"
       >
         <FaEnvelope className="icon" />
