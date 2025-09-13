@@ -1,0 +1,15 @@
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* utility container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}

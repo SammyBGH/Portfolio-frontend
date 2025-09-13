@@ -1,0 +1,66 @@
+.skills {
+  padding: 4rem 4rem;
+  border-top: 1px solid rgba(255,255,255,0.03);
+  text-align: center; /* center heading and content */
+}
+
+.skills h2 {
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center; /* center the skill bars */
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 500px; /* limit bar width */
+}
+
+.skill__label {
+  color: var(--muted);
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+}
+
+.skill__bar {
+  height: 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.skill__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #7b61ff);
+  border-radius: 12px 0 0 12px;
+  width: 0%;
+  transition: width 1.2s ease-out;
+}
+
+/* Slightly narrower bars on very large screens */
+@media (min-width: 1200px) {
+  .skill {
+    max-width: 400px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .skills {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    padding: 3rem 1.5rem;
+  }
+}
